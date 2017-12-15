@@ -14,6 +14,10 @@ Vagrant.configure("2") do |config|
   # boxes at https://vagrantcloud.com/search.
   config.vm.box = "ubuntu/trusty64"
 
+  config.vm.synced_folder "C:/cygwin64/home/jorav/prueba", "/vagrant", disable: true
+  config.vm.synced_folder "C:/cygwin64/home/jorav/prueba/configuracion", "/etc/apache2/sites-available"
+  config.vm.synced_folder "C:/cygwin64/home/jorav/prueba/sitios", "/var/www"
+
   config.vm.provision "shell", path: "provision.sh"
 
   # Disable automatic box update checking. If you disable this, then
@@ -35,7 +39,7 @@ Vagrant.configure("2") do |config|
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
-  # config.vm.network "private_network", ip: "192.168.33.10"
+  config.vm.network "private_network", ip: "192.168.33.10"
 
   # Create a public network, which generally matched to bridged network.
   # Bridged networks make the machine appear as another physical device on

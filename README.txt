@@ -1,0 +1,2 @@
+Para poder aprovisionar correctamente las aplicaciones se tendrá que iniciar la máquina. Una vez iniciada el archivo provision.sh instalara apache, git y creara los sitios y les dara acceso. El usuario tendrá que poner la dirección IP anfitrión en el archivo
+host del fichero de la máquina local. Si el usuario desea crear un nuevo proyecto podrá crearlo en la carpeta compartida llamada sitios. Esta carpeta esta compartida con /var/www del apache.
